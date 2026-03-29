@@ -28,7 +28,7 @@ export default function Sidebar() {
   ];
 
   const profile = {
-  nama: "Julpa",
+  nama: "Zulfa Fitri",
   headline: "Frontend Dev",
   email: "email@gmail.com",
   kelas: "TI-21A",
