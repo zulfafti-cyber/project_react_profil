@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import { RouterProvider } from "react-router/dom";
 import { createBrowserRouter } from "react-router";
 import Zulfa from "./pages/zulfa.jsx"
+import Lanika from "./pages/lanika.jsx"
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/zulfa",
     element: <Zulfa/>
+  },
+  {
+    path: "/lanika",
+    element: <Lanika/>
   }
 ]);
 
