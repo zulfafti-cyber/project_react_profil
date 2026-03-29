@@ -5,6 +5,7 @@ import { RouterProvider } from "react-router/dom";
 import { createBrowserRouter } from "react-router";
 import Zulfa from "./pages/zulfa.jsx"
 import Lanika from "./pages/lanika.jsx"
+import Kayla from "./pages/kayla.jsx"
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/lanika",
     element: <Lanika/>
+  },
+  {
+    path: "/kayla",
+    element: <Kayla/>
   }
 ]);
 
