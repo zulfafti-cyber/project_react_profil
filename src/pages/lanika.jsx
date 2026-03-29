@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import fotoKeisya from '../assets/foto-keisya.jpg'; // Import foto
 
 const LanikaProfile = () => {
   const [hovered, setHovered] = useState(false);
@@ -28,41 +29,41 @@ const LanikaProfile = () => {
         </div>
       </div>
 
+      {/* MAIN CONTENT */}
       <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* LEFT SIDEBAR - Profile Card */}
         <div className="lg:col-span-1">
           <div className="bg-white rounded-2xl shadow-sm border p-8 hover:shadow-xl hover:shadow-purple-200 transition-all duration-300">
             
-            {/* Profile Picture  */}
+            {/* Profile Picture */}
             <div className="text-center mb-8">
-                <div className="inline-block">
-                     <img 
-                        src="/foto-keisya.jpg" 
-                        className="w-36 h-36 mx-auto rounded-3xl border-6 border-white shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-400 cursor-pointer object-cover ring-4 ring-gray-100 hover:ring-purple-200"
-                        alt="Keisya Lanika" 
-                     />
-                </div>
-                <h2 className="text-3xl font-bold text-gray-900 mt-6 mb-1">Keisya Lanika</h2>
-                <p className="text-blue-600 font-semibold text-xl">UI/UX Designer</p>
+              <div className="inline-block">
+                <img 
+                  src={fotoKeisya}
+                  className="w-36 h-36 mx-auto rounded-3xl border-6 border-white shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-400 cursor-pointer object-cover ring-4 ring-gray-100 hover:ring-purple-200"
+                  alt="Keisya Lanika" 
+                />
+              </div>
             </div>
+            
+            <h2 className="text-3xl font-bold text-gray-900 mt-6 mb-1">Keisya Lanika</h2>
+            <p className="text-blue-600 font-semibold text-xl">UI/UX Designer</p>
 
             {/* Quick Info */}
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4 mb-8 mt-8">
               <div className="flex items-center text-gray-700">
                 <span className="w-6 text-center mr-3">🎓</span>
-                <span className="text-sm font-medium">TI-3 • Teknologi Informasi</span>
+                <span className="text-sm font-medium">T2B • Teknologi Informasi</span>
               </div>
               <div className="flex items-center text-gray-700">
                 <span className="w-6 text-center mr-3">📍</span>
-                <span className="text-sm font-medium">Blitar, Jawa Timur</span>
+                <span className="text-sm font-medium">Jakarta Selatan, DKI JAKARTA</span>
               </div>
             </div>
 
             {/* About Section */}
             <div className="mb-8">
-              <h3 className="font-semibold text-lg text-gray-900 mb-4 flex items-center">
-                👤 Tentang
-              </h3>
+              <h3 className="font-semibold text-lg text-gray-900 mb-4 flex items-center">👤 Tentang</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Saya adalah mahasiswa Teknologi Informasi di Universitas Brawijaya 
                 yang memiliki minat besar dalam bidang pengembangan web dan desain UI/UX. 
@@ -87,31 +88,27 @@ const LanikaProfile = () => {
           </div>
         </div>
 
-        {/* MAIN CONTENT */}
+        {/* MAIN CONTENT - RIGHT SIDE */}
         <div className="lg:col-span-2 space-y-6">
-          
           {/* Experience */}
           <div className="bg-white rounded-2xl shadow-sm border p-8">
-            <h3 className="font-semibold text-xl text-gray-900 mb-6 flex items-center">
-              💼 Pengalaman
-            </h3>
+            <h3 className="font-semibold text-xl text-gray-900 mb-6 flex items-center">💼 Pengalaman</h3>
             <div className="space-y-6">
               <div className="flex items-start space-x-4 group">
                 <div className="w-3 h-3 bg-blue-600 rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
                 <div className="flex-1">
                   <h4 className="font-bold text-lg text-gray-900 mb-1">UI/UX Designer Intern</h4>
                   <p className="text-blue-600 font-semibold mb-2">PT Digital Creative</p>
-                  <p className="text-sm text-gray-500 mb-2">Juni 2024 - Sekarang</p>
+                  <p className="text-sm text-gray-500 mb-2">Juni 2026 - Sekarang</p>
                   <p className="text-sm text-gray-600">Mendesain UI/UX untuk web & mobile apps</p>
                 </div>
               </div>
-              
               <div className="flex items-start space-x-4 group">
                 <div className="w-3 h-3 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
                 <div className="flex-1">
                   <h4 className="font-bold text-lg text-gray-900 mb-1">Mahasiswa TI</h4>
                   <p className="text-gray-600 font-semibold mb-2">Universitas Brawijaya</p>
-                  <p className="text-sm text-gray-500">2023 - 2027</p>
+                  <p className="text-sm text-gray-500">2023 - 2026</p>
                 </div>
               </div>
             </div>
@@ -119,11 +116,9 @@ const LanikaProfile = () => {
 
           {/* Skills */}
           <div className="bg-white rounded-2xl shadow-sm border p-8">
-            <h3 className="font-semibold text-xl text-gray-900 mb-6 flex items-center">
-              🛠️ Skills
-            </h3>
+            <h3 className="font-semibold text-xl text-gray-900 mb-6 flex items-center">🛠️ Skills</h3>
             <div className="flex flex-wrap gap-2">
-              {['Figma', 'React', 'Tailwind CSS', 'UI/UX Design', 'JavaScript', 'Prototyping', 'HTML/CSS'].map((skill) => (
+              {['Figma', 'React', 'Tailwind CSS', 'UI/UX Design', 'JavaScript', 'Prototyping', 'HTML/CSS'].map(skill => (
                 <span 
                   key={skill} 
                   className="px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-sm rounded-full font-medium border border-blue-200 hover:from-blue-200 hover:to-purple-200 cursor-pointer transition-all duration-200 hover:scale-105 shadow-sm"
@@ -136,9 +131,7 @@ const LanikaProfile = () => {
 
           {/* Recent Activity */}
           <div className="bg-white rounded-2xl shadow-sm border p-8">
-            <h3 className="font-semibold text-xl text-gray-900 mb-6 flex items-center">
-              📈 Aktivitas Terbaru
-            </h3>
+            <h3 className="font-semibold text-xl text-gray-900 mb-6 flex items-center">📈 Aktivitas Terbaru</h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
