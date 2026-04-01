@@ -8,7 +8,7 @@ export default function Kayla() {
         <div className="absolute right-[-100px] top-[180px] h-80 w-80 rounded-full bg-sky-300/30 blur-3xl"></div>
         <div className="absolute bottom-[-120px] left-[25%] h-72 w-72 rounded-full bg-purple-300/30 blur-3xl"></div>
       </div>
-
+      
       <div className="mx-auto max-w-6xl px-6 py-10 md:px-10 lg:px-12">
         {/* Header */}
         <div className="mb-8 rounded-3xl border border-white/40 bg-white/70 p-6 shadow-xl backdrop-blur-lg md:p-8">
