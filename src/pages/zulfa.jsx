@@ -177,17 +177,6 @@ export default function Profile() {
 
         </div>
 
-        <div className="mt-8 space-y-3">
-          {["2019-2022"].map((item, i) => (
-            <motion.div
-              key={i}
-              whileHover={{ scale: 1.03 }}
-              className="bg-[#a6cfa7] text-white py-2 px-4 rounded-lg text-center font-medium"
-            >
-              {item}
-            </motion.div>
-          ))}
-        </div>
       </motion.div>
 
     </div>
