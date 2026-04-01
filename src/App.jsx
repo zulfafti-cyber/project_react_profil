@@ -16,7 +16,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1e1f3a] to-[#2b2e5a] text-white flex relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-[#1e1f3a] to-[#2b2e5a] text-white flex flex-col lg:flex-row relative overflow-hidden">
 
       {/* BACKGROUND EFFECT */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -25,8 +25,8 @@ export default function Sidebar() {
       </div>
 
       {/* MINI SIDEBAR */}
-      <div className="flex h-screen p-4">
-        <div className="w-16 h-[47vh] rounded-2xl backdrop-blur-xl border border-white/20 flex flex-col items-center py-4 justify-between">
+      <div className="flex h-auto lg:h-screen p-4">
+        <div className="w-16 h-auto lg:h-[47vh] rounded-2xl backdrop-blur-xl border border-white/20 flex flex-col items-center py-4 justify-between">
           <div className="flex flex-col gap-6">
             {menu.map((item, i) => (
               <div
@@ -49,7 +49,7 @@ export default function Sidebar() {
         <div
           className={`transition-all duration-300 ${
             open ? "w-72" : "w-0 opacity-0"
-          } overflow-hidden h-[47vh] rounded-2xl backdrop-blur-xl border border-white/20 p-5`}
+          } overflow-hidden h-auto lg:h-[47vh] rounded-2xl backdrop-blur-xl border border-white/20 p-5`}
         >
           <div className="flex items-center bg-white/10 px-3 py-2 rounded-lg mb-5">
             <Search size={16} className="mr-2" />
@@ -77,20 +77,20 @@ export default function Sidebar() {
       </div>
 
       {/* MAIN CONTENT */}
-      <div className="flex-1 flex flex-col items-center justify-start px-10 pt-20">
+      <div className="flex-1 flex flex-col items-center justify-start px-4 sm:px-6 lg:px-10 pt-10 sm:pt-16 lg:pt-20">
 
         {/* TITLE */}
-        <h1 className="text-4xl font-extrabold mb-10 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg">
+        <h1 className="text-3xl sm:text-4xl font-extrabold mb-10 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg">
           Halaman Profil
         </h1>
 
         {/* CARD LIST */}
-        <div className="grid grid-cols-3 gap-10 animate-fadeIn">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 animate-fadeIn">
 
           {/* ZULFA */}
           <div
             onClick={() => navigate("/zulfa")}
-            className="cursor-pointer bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl w-64 text-center 
+            className="cursor-pointer bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl w-full max-w-xs mx-auto text-center 
             hover:bg-white/20 transition group hover:scale-105 duration-300
             hover:shadow-[0_0_25px_rgba(59,130,246,0.5)]"
           >
@@ -103,7 +103,7 @@ export default function Sidebar() {
           {/* KAYLA */}
           <div
             onClick={() => navigate("/kayla")}
-            className="cursor-pointer bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl w-64 text-center 
+            className="cursor-pointer bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl w-full max-w-xs mx-auto text-center 
             hover:bg-white/20 transition group hover:scale-105 duration-300
             hover:shadow-[0_0_25px_rgba(236,72,153,0.5)]"
           >
@@ -118,7 +118,7 @@ export default function Sidebar() {
           {/* LANIKA */}
           <div
             onClick={() => navigate("/lanika")}
-            className="cursor-pointer bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl w-64 text-center 
+            className="cursor-pointer bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl w-full max-w-xs mx-auto text-center 
             hover:bg-white/20 transition group hover:scale-105 duration-300
             hover:shadow-[0_0_25px_rgba(168,85,247,0.5)]"
           >
