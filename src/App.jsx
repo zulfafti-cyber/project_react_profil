@@ -1,79 +1,16 @@
-import React, { useState } from "react";
-import { Search, Home, Bell, Settings, User, LogOut, CircleChevronRight, CircleChevronLeft } from "lucide-react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Sidebar() {
-  const [open, setOpen] = useState(true);
   const navigate = useNavigate();
 
-  const menu = [
-    { name: "Search", icon: <Search size={18} /> },
-    { name: "Home", icon: <Home size={18} /> },
-    { name: "Notification", icon: <Bell size={18} /> },
-    { name: "Settings", icon: <Settings size={18} /> },
-    { name: "Profil", icon: <User size={18} /> },
-    { name: "Log out", icon: <LogOut size={18} /> },
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1e1f3a] to-[#2b2e5a] text-white flex flex-col lg:flex-row relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-[#1e1f3a] to-[#2b2e5a] text-white flex relative overflow-hidden">
 
       {/* BACKGROUND EFFECT */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute top-[-100px] left-[-100px] w-72 h-72 bg-purple-500 rounded-full blur-3xl opacity-30"></div>
         <div className="absolute bottom-[-100px] right-[-100px] w-72 h-72 bg-blue-500 rounded-full blur-3xl opacity-30"></div>
-      </div>
-
-      {/* MINI SIDEBAR */}
-      <div className="flex h-auto lg:h-screen p-4">
-        <div className="w-16 h-auto lg:h-[47vh] rounded-2xl backdrop-blur-xl border border-white/20 flex flex-col items-center py-4 justify-between">
-          <div className="flex flex-col gap-6">
-            {menu.map((item, i) => (
-              <div
-                key={i}
-                className={`flex items-center gap-2 px-2 py-3 rounded-lg cursor-pointer hover:bg-white/20 ${
-                  i === 4 ? "bg-blue-500" : ""
-                }`}
-              >
-                {item.icon}
-              </div>
-            ))}
-          </div>
-
-          <button onClick={() => setOpen(!open)}>
-            {open ? <CircleChevronLeft /> : <CircleChevronRight />}
-          </button>
-        </div>
-
-        {/* MAIN SIDEBAR */}
-        <div
-          className={`transition-all duration-300 ${
-            open ? "w-72" : "w-0 opacity-0"
-          } overflow-hidden h-auto lg:h-[47vh] rounded-2xl backdrop-blur-xl border border-white/20 p-5`}
-        >
-          <div className="flex items-center bg-white/10 px-3 py-2 rounded-lg mb-5">
-            <Search size={16} className="mr-2" />
-            <input
-              type="text"
-              placeholder="Search..."
-              className="bg-transparent outline-none text-sm w-full"
-            />
-          </div>
-
-          <div className="space-y-6">
-            {menu.slice(1).map((item, i) => (
-              <div
-                key={i}
-                className={`flex items-center gap-2 px-2 py-3 rounded-lg cursor-pointer hover:bg-white/20 ${
-                  i === 3 ? "bg-blue-500" : ""
-                }`}
-              >
-                {item.icon}
-                <span className="text-sm">{item.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* MAIN CONTENT */}
